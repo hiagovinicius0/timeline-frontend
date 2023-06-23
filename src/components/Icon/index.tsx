@@ -16,7 +16,7 @@ interface IconProps {
 	size?: keyof typeof iconSizes;
 }
 
-export const Icon = ({ name, size }: IconProps) => {
+export const Icon = ({ name, size, ...props }: IconProps) => {
 	const CurrentIcon = icons[name];
 	if (!CurrentIcon) return <>{`${name} is not a valid icon!`}</>;
 	return (
@@ -27,6 +27,7 @@ export const Icon = ({ name, size }: IconProps) => {
 			fill="currentColor"
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
+			{...props}
 		>
 			<CurrentIcon />
 		</BaseComponent>
