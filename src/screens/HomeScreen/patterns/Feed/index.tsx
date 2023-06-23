@@ -1,6 +1,7 @@
 import { Box } from "@src/components/Box";
 import { Icon } from "@src/components/Icon";
 import { Image } from "@src/components/Image";
+import { Link } from "@src/components/Link";
 import { Text } from "@src/components/Text";
 import { ReactNode } from "react";
 
@@ -25,7 +26,9 @@ Feed.Header = () => {
 				alt="Imagem de perfil do Mario Souto"
 				styleSheet={{ width: "128px", height: "128px", borderRadius: "100%" }}
 			/>
-			<Icon name="youtube" />
+			<Link href="https://youtube.com/DevSoutinho">
+				<Icon name="youtube" />
+			</Link>
 			<Icon name="twitter" />
 			<Icon name="instagram" />
 			<Icon name="github" />
