@@ -24,6 +24,8 @@ export const Button = ({
 	return (
 		<ButtonBase
 			styleSheet={{
+				alignItems: "center",
+				justifyContent: "center",
 				...colorVariantBy(theme, colorVariant, variant),
 				...buttonSize[size],
 				alignSelf: "flex-start",

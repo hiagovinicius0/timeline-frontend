@@ -5,7 +5,6 @@ import { Text } from "@src/components/Text";
 import { Feed } from "./patterns/Feed";
 import { Footer } from "./patterns/Footer";
 import { useTheme } from "@src/theme/ThemeProvider";
-import { Link } from "@src/components/Link";
 
 export const HomeScreen = () => {
 	const theme = useTheme();
@@ -13,25 +12,23 @@ export const HomeScreen = () => {
 		<Box
 			tag="main"
 			styleSheet={{
-				backgroundColor: theme.colors.positive.x100,
+				backgroundColor: theme.colors.neutral.x000,
 				flex: 1,
 				alignItems: "center",
 			}}
 		>
-			<Link href="/sobre" colorVariant="negative">
-				{" "}
-				Vá para página Sobre
-			</Link>
-			<Link href="https://google.com"> Vá para página Google</Link>
-
 			<Background />
 			<Menu />
 			<Feed>
 				<Feed.Header />
-				<Text variant="display1">Últimas Atualizações</Text>
-				<Feed.Posts></Feed.Posts>
+				{/*<Text variant="display1">Últimas Atualizações</Text>
+				<Feed.Posts></Feed.Posts>*/}
 			</Feed>
 			<Footer />
+
+			{/*<Menu />
+
+			<Footer />*/}
 		</Box>
 	);
 };
